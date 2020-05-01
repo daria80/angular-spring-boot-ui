@@ -1,0 +1,34 @@
+<div>
+  <div>
+    {{ a }}
+  </div>
+
+  <div *ngFor="let student of studentsFromServer">
+    <div>
+      {{ student.id }}
+      {{ student.firstName }}
+      {{ student.lastName }}
+      {{ student.major }}
+      {{ student.birthDay }}
+    </div>
+  </div>
+
+  <div>
+    <label>
+      <input type="text" placeholder="First name" [formControl]="firstName"/>
+    </label>
+    <label>
+      <input type="text" placeholder="Last name" [formControl]="lastName"/>
+    </label>
+    <label>
+      <input type="text" placeholder="Major" [formControl]="major"/>
+    </label>
+    <label>
+      <input type="text" placeholder="Birthday" [formControl]="birthDay"/>
+    </label>
+    <label>
+      <button (click)="createStudent()" class="btn">Create</button>
+    </label>
+  </div>
+
+</div>
